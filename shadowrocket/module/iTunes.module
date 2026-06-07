@@ -1,0 +1,9 @@
+#!name=iTunes系列解锁
+#!desc=自动查询 App 内购产品并注入最贵套餐凭证，可在设置中关闭。
+#!category=通杀脚本
+
+[URL Rewrite]
+^https://buy\.itunes\.apple\.com/verifyReceipt https://reven.jsforbaby.workers.dev/reven/buy.itunes.apple.com/verifyReceipt?enabled=true&expires=2099-09-09&country=HK header
+
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com
