@@ -27,9 +27,9 @@
 | `surge/rules/ai-major.list` | 官方或大规模 AI 服务，避免把普通小站或共享基础设施塞进 AI 策略 |
 | `surge/rules/pre-ai-infra.list` | Stripe、Cloudflare Challenge、Google 通用后台等共享基础设施，放在 AI 前匹配 |
 | `surge/rules/direct-cn.list` | 高频中国大陆网站和 CDN 直连兜底 |
-| `surge/rules/emby-meta.list` | Emby/Jellyfin 元数据与字幕服务 |
 
 > 模板不包含任何真实节点或订阅链接。请在客户端内添加自己的节点/订阅后，再使用策略组进行筛选或选择。
+> 私有 Emby/Jellyfin 服务器、元数据与字幕规则建议放在本地模块或私有规则集中，不放入公开仓库。
 
 ## Surge 模块
 
