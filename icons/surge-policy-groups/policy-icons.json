@@ -1,0 +1,146 @@
+{
+  "name": "Qidewei Policy Icons",
+  "description": "Transparent mini policy-group icons for Surge, inspired by Qure mini and ColorfulStaticFlag.",
+  "icons": [
+    {
+      "name": "PROXY",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/proxy.png"
+    },
+    {
+      "name": "Proxy",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/proxy.png"
+    },
+    {
+      "name": "Auto",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/auto.png"
+    },
+    {
+      "name": "AUTO",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/auto.png"
+    },
+    {
+      "name": "FINAL",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/final.png"
+    },
+    {
+      "name": "国际基础服务",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/intl-services.png"
+    },
+    {
+      "name": "INTL",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/intl-services.png"
+    },
+    {
+      "name": "AI",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/ai.png"
+    },
+    {
+      "name": "国际社区",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/global-community.png"
+    },
+    {
+      "name": "SOCIAL",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/global-community.png"
+    },
+    {
+      "name": "中文内容",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/chinese-content.png"
+    },
+    {
+      "name": "CN",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/chinese-content.png"
+    },
+    {
+      "name": "Emby",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/emby.png"
+    },
+    {
+      "name": "EMBY",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/emby.png"
+    },
+    {
+      "name": "Game",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/game.png"
+    },
+    {
+      "name": "GAME",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/game.png"
+    },
+    {
+      "name": "SpeedTest",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/speedtest.png"
+    },
+    {
+      "name": "SPEEDTEST",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/speedtest.png"
+    },
+    {
+      "name": "机场合集",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/airport-collection.png"
+    },
+    {
+      "name": "新加坡",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/singapore.png"
+    },
+    {
+      "name": "SG",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/singapore.png"
+    },
+    {
+      "name": "日本",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/japan.png"
+    },
+    {
+      "name": "JP",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/japan.png"
+    },
+    {
+      "name": "香港",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/hong-kong.png"
+    },
+    {
+      "name": "HK",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/hong-kong.png"
+    },
+    {
+      "name": "台湾",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/taiwan.png"
+    },
+    {
+      "name": "TW",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/taiwan.png"
+    },
+    {
+      "name": "韩国",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/korea.png"
+    },
+    {
+      "name": "KR",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/korea.png"
+    },
+    {
+      "name": "美国",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/united-states.png"
+    },
+    {
+      "name": "US",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/united-states.png"
+    },
+    {
+      "name": "英国",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/united-kingdom.png"
+    },
+    {
+      "name": "UK",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/united-kingdom.png"
+    },
+    {
+      "name": "STREAM",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/stream.png"
+    },
+    {
+      "name": "TIKTOK",
+      "url": "https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/tiktok.png"
+    }
+  ]
+}
