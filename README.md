@@ -13,7 +13,6 @@
 | `mihomo/` | Mihomo / Clash 覆写模板（`.yaml`），作为 override 叠加到订阅配置之上 |
 | `Rules/Surge/` | Surge 专用规则集归档 |
 | `surge/modules/` | Surge 功能增强模块（`.sgmodule`），独立可开关，通过 `%APPEND%` / `%INSERT%` 与主配置合并 |
-| `icons/` | Surge 策略组图标资产，包含 SVG 母版、512 x 512 PNG 与预览图 |
 
 ## 可复用配置模板
 
@@ -21,6 +20,7 @@
 |---|---|
 | Surge | `https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/surge/Surge.clean.conf` |
 | Shadowrocket | `https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/shadowrocket/shadowrocket.conf` |
+| Mihomo / Clash | `https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/mihomo/mihomo-override.yaml` |
 
 公开模板使用仓库内规则集：
 
@@ -32,16 +32,6 @@
 
 > 模板不包含任何真实节点或订阅链接。请在客户端内添加自己的节点/订阅后，再使用策略组进行筛选或选择。
 > 私有 Emby/Jellyfin 服务器、元数据与字幕规则建议放在本地模块或私有规则集中，不放入公开仓库。
-
-## Surge 策略组图标
-
-统一风格的策略组图标位于 `icons/surge-policy-groups/`，PNG 可直接作为 Surge `icon-url` 使用：
-
-```text
-https://fastly.jsdelivr.net/gh/qidewei2004/proxy-configs@main/icons/surge-policy-groups/proxy.png
-```
-
-完整映射见 `icons/surge-policy-groups/README.md`。
 
 ## Surge 模块
 

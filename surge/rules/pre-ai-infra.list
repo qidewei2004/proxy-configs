@@ -1,4 +1,7 @@
 # Shared infrastructure that should not consume dedicated AI policies.
+DOMAIN-SUFFIX,fonts.gstatic.com
+DOMAIN-SUFFIX,ssl.gstatic.com
+DOMAIN-SUFFIX,maps.gstatic.com
 DOMAIN,challenges.cloudflare.com
 DOMAIN,js.stripe.com
 DOMAIN-SUFFIX,stripe.com

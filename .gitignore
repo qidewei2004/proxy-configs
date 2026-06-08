@@ -9,6 +9,7 @@ Surge.conf
 mihomo/*.private.yaml
 mihomo/*.local.yaml
 private-backup/
+icons/
 
 # Generated caches
 __pycache__/

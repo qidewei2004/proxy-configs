@@ -142,22 +142,23 @@ TextRuleProviders: &TextRuleProviders {type: http, behavior: classical, interval
 
 # 策略组
 proxy-groups: 
-  - {name: 手动选择, type: select, include-all: true, include-all-providers: true, filter: *FilterAll, proxies: [全球自动, 香港自动策略, 台湾自动策略, 日本自动策略, 新国自动策略, 美国自动策略, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png'}
-  - {name: 全球自动, <<: *UrlTest, filter: *FilterAll, hidden: false, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png'}
-  - {name: 国内服务, type: select, proxies: [DIRECT, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Domestic.png'}
-  - {name: AI, type: select, proxies: [美国自动策略, 日本自动策略, 新国自动策略, 台湾自动策略, 香港自动策略, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
-  - {name: 国际基础服务, type: select, proxies: [全球自动, 美国自动策略, 日本自动策略, 新国自动策略, 香港自动策略, 台湾自动策略, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png'}
-  - {name: 国际社区, type: select, proxies: [全球自动, 香港自动策略, 台湾自动策略, 日本自动策略, 新国自动策略, 美国自动策略, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png'}
-  - {name: 游戏平台, type: select, proxies: [DIRECT, 香港自动策略, 日本自动策略, 新国自动策略, 美国自动策略, 全球自动, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png'}
-  - {name: 下载服务, type: select, proxies: [DIRECT, 手动选择, 全球自动], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png'}
-  - {name: 测速服务, type: select, proxies: [DIRECT, 全球自动, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png'}
-  - {name: 漏网之鱼, type: select, proxies: [全球自动, 手动选择, 国际基础服务, 国际社区, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png'}
+  - {name: PROXY, type: select, include-all: true, include-all-providers: true, filter: *FilterAll, proxies: [Auto, 香港, 台湾, 新加坡, 日本, 美国, 韩国, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png'}
+  - {name: Auto, <<: *UrlTest, filter: *FilterAll, hidden: false, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png'}
+  - {name: FINAL, type: select, proxies: [PROXY, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png'}
+  - {name: 国际基础服务, type: select, proxies: [新加坡, 美国, PROXY, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png'}
+  - {name: AI, type: select, proxies: [美国, 新加坡, 台湾, 日本, PROXY], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
+  - {name: 国际社区, type: select, proxies: [香港, 新加坡, 美国, 台湾, 日本, PROXY], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png'}
+  - {name: Emby, <<: *UrlTest, filter: '^(?=.*((?i)🇭🇰|香港|港|Hong|HK|🇸🇬|新加坡|SG|Singapore|🇰🇷|韩国|韩|KR|Korea|🇹🇼|台湾|台|TW|Tai))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$', hidden: false, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png'}
+  - {name: Game, type: select, proxies: [香港, 日本, 美国, 台湾, 新加坡, 韩国, PROXY, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png'}
+  - {name: SpeedTest, type: select, proxies: [PROXY, Auto, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png'}
   # 地区策略
-  - {name: 香港自动策略, <<: *UrlTest, filter: *FilterHK, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HK.png'}
-  - {name: 台湾自动策略, <<: *UrlTest, filter: *FilterTW, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png'}
-  - {name: 日本自动策略, <<: *UrlTest, filter: *FilterJP, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png'}
-  - {name: 新国自动策略, <<: *UrlTest, filter: *FilterSG, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/SG.png'}
-  - {name: 美国自动策略, <<: *UrlTest, filter: *FilterUS, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png'}
+  - {name: 香港, <<: *UrlTest, filter: *FilterHK, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HK.png'}
+  - {name: 台湾, <<: *UrlTest, filter: *FilterTW, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png'}
+  - {name: 新加坡, <<: *UrlTest, filter: *FilterSG, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/SG.png'}
+  - {name: 日本, <<: *UrlTest, filter: *FilterJP, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png'}
+  - {name: 韩国, <<: *UrlTest, filter: *FilterKR, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/KR.png'}
+  - {name: 美国, <<: *UrlTest, filter: *FilterUS, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png'}
+  - {name: 英国, <<: *UrlTest, filter: '^(?=.*((?i)🇬🇧|英国|英格兰|GBR|United Kingdom|UK|England|Britain|British))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$', icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/UK.png'}
 
 
 rule-providers:
@@ -719,52 +720,52 @@ rules:
   # 2. 局域网、系统直连与下载进程
   - RULE-SET,Lan,DIRECT
   - GEOSITE,private,DIRECT
-  - RULE-SET,Download,下载服务
-  - RULE-SET,PrivateTracker,下载服务
+  - RULE-SET,Download,PROXY
+  - RULE-SET,PrivateTracker,PROXY
 
   # 3. 国内常用服务与内容平台
-  - RULE-SET,DirectCN,国内服务
-  - RULE-SET,Direct,国内服务
-  - RULE-SET,WeChat,国内服务
-  - RULE-SET,Alibaba,国内服务
-  - RULE-SET,AliPay,国内服务
-  - RULE-SET,Baidu,国内服务
-  - RULE-SET,Tencent,国内服务
-  - RULE-SET,JingDong,国内服务
-  - RULE-SET,MeiTuan,国内服务
-  - RULE-SET,Eleme,国内服务
-  - RULE-SET,GaoDe,国内服务
-  - RULE-SET,DiDi,国内服务
-  - RULE-SET,Pinduoduo,国内服务
-  - RULE-SET,ByteDance,国内服务
-  - RULE-SET,DouYin,国内服务
-  - RULE-SET,XiaoHongShu,国内服务
-  - RULE-SET,Weibo,国内服务
-  - RULE-SET,Sina,国内服务
-  - RULE-SET,Sohu,国内服务
-  - RULE-SET,Zhihu,国内服务
-  - RULE-SET,DouBan,国内服务
-  - RULE-SET,SMZDM,国内服务
-  - RULE-SET,CSDN,国内服务
-  - RULE-SET,JueJin,国内服务
-  - RULE-SET,Gitee,国内服务
-  - RULE-SET,NetEase,国内服务
-  - RULE-SET,NetEaseMusic,国内服务
-  - RULE-SET,Huawei,国内服务
-  - RULE-SET,UnionPay,国内服务
-  - RULE-SET,12306,国内服务
-  - RULE-SET,BiliBili,国内服务
-  - RULE-SET,TencentVideo,国内服务
-  - RULE-SET,iQIYI,国内服务
-  - RULE-SET,Youku,国内服务
-  - RULE-SET,Migu,国内服务
-  - RULE-SET,ChinaMedia,国内服务
-  - DOMAIN-SUFFIX,uy5.net,国内服务
-  - DOMAIN-SUFFIX,crxsoso.com,国内服务
-  - RULE-SET,ChinaNoMedia,国内服务
-  - RULE-SET,ChinaMaxNoIP,国内服务
-  - RULE-SET,China,国内服务
-  - GEOSITE,CN,国内服务
+  - RULE-SET,DirectCN,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,WeChat,DIRECT
+  - RULE-SET,Alibaba,DIRECT
+  - RULE-SET,AliPay,DIRECT
+  - RULE-SET,Baidu,DIRECT
+  - RULE-SET,Tencent,DIRECT
+  - RULE-SET,JingDong,DIRECT
+  - RULE-SET,MeiTuan,DIRECT
+  - RULE-SET,Eleme,DIRECT
+  - RULE-SET,GaoDe,DIRECT
+  - RULE-SET,DiDi,DIRECT
+  - RULE-SET,Pinduoduo,DIRECT
+  - RULE-SET,ByteDance,DIRECT
+  - RULE-SET,DouYin,DIRECT
+  - RULE-SET,XiaoHongShu,DIRECT
+  - RULE-SET,Weibo,DIRECT
+  - RULE-SET,Sina,DIRECT
+  - RULE-SET,Sohu,DIRECT
+  - RULE-SET,Zhihu,DIRECT
+  - RULE-SET,DouBan,DIRECT
+  - RULE-SET,SMZDM,DIRECT
+  - RULE-SET,CSDN,DIRECT
+  - RULE-SET,JueJin,DIRECT
+  - RULE-SET,Gitee,DIRECT
+  - RULE-SET,NetEase,DIRECT
+  - RULE-SET,NetEaseMusic,DIRECT
+  - RULE-SET,Huawei,DIRECT
+  - RULE-SET,UnionPay,DIRECT
+  - RULE-SET,12306,DIRECT
+  - RULE-SET,BiliBili,DIRECT
+  - RULE-SET,TencentVideo,DIRECT
+  - RULE-SET,iQIYI,DIRECT
+  - RULE-SET,Youku,DIRECT
+  - RULE-SET,Migu,DIRECT
+  - RULE-SET,ChinaMedia,DIRECT
+  - DOMAIN-SUFFIX,uy5.net,DIRECT
+  - DOMAIN-SUFFIX,crxsoso.com,DIRECT
+  - RULE-SET,ChinaNoMedia,DIRECT
+  - RULE-SET,ChinaMaxNoIP,DIRECT
+  - RULE-SET,China,DIRECT
+  - GEOSITE,CN,DIRECT
 
   # 4. Apple 直连、Microsoft 分流、Google 与支付/云基础设施
   - RULE-SET,iCloud,DIRECT
@@ -804,10 +805,10 @@ rules:
   - RULE-SET,OneDrive,国际基础服务
   - RULE-SET,Microsoft,国际基础服务
   - RULE-SET,Google,国际基础服务
-  - RULE-SET,PayPal,国际基础服务
-  - RULE-SET,Oracle,国际基础服务
+  - RULE-SET,PayPal,DIRECT
+  - RULE-SET,Oracle,DIRECT
   - RULE-SET,Amazon,国际基础服务
-  - RULE-SET,Cloudflare,国际基础服务
+  - RULE-SET,Cloudflare,PROXY
 
   # 5. 海外通信、社交与社区
   - RULE-SET,Telegram,国际社区
@@ -821,29 +822,29 @@ rules:
   - RULE-SET,Discord,国际社区
 
   # 6. 海外流媒体与影音平台
-  - RULE-SET,Netflix,国际社区
+  - RULE-SET,Netflix,PROXY
   - RULE-SET,YouTube,国际社区
-  - RULE-SET,Spotify,国际社区
+  - RULE-SET,Spotify,日本
   - RULE-SET,TikTok,国际社区
-  - RULE-SET,Disney,国际社区
-  - RULE-SET,HBO,国际社区
+  - RULE-SET,Disney,PROXY
+  - RULE-SET,HBO,PROXY
   - RULE-SET,Bahamut,国际社区
-  - RULE-SET,GlobalMedia,国际社区
+  - RULE-SET,GlobalMedia,PROXY
 
   # 7. 开发、知识、生产力与云服务
-  - RULE-SET,GitHub,国际社区
-  - RULE-SET,GitLab,国际社区
+  - RULE-SET,GitHub,国际基础服务
+  - RULE-SET,GitLab,国际基础服务
   - RULE-SET,Developer,国际社区
   - RULE-SET,Docker,国际社区
   - RULE-SET,Figma,国际社区
   - RULE-SET,DigitalOcean,国际社区
-  - RULE-SET,Notion,国际社区
-  - RULE-SET,Wikipedia,国际社区
-  - RULE-SET,Scholar,国际社区
+  - RULE-SET,Notion,国际基础服务
+  - RULE-SET,Wikipedia,新加坡
+  - RULE-SET,Scholar,国际基础服务
   - RULE-SET,GlobalScholar,国际社区
-  - RULE-SET,Dropbox,国际社区
-  - RULE-SET,AOL,国际社区
-  - RULE-SET,Protonmail,国际社区
+  - RULE-SET,Dropbox,国际基础服务
+  - RULE-SET,AOL,国际基础服务
+  - RULE-SET,Protonmail,国际基础服务
   - DOMAIN-SUFFIX,githubusercontent.com,国际社区
   - DOMAIN-SUFFIX,githubassets.com,国际社区
   - DOMAIN-SUFFIX,github.io,国际社区
@@ -856,39 +857,43 @@ rules:
   - DOMAIN-SUFFIX,docker.com,国际社区
   - DOMAIN-SUFFIX,docker.io,国际社区
   - DOMAIN-SUFFIX,ghcr.io,国际社区
-  - DOMAIN-SUFFIX,vercel.app,国际社区
-  - DOMAIN,plugins.jetbrains.com,国际社区
-  - DOMAIN,jike.teracloud.jp,日本自动策略
-  - DOMAIN-SUFFIX,infini-cloud.net,日本自动策略
-  - DOMAIN-SUFFIX,yahoo.com,国际社区
+  - DOMAIN-SUFFIX,vercel.app,PROXY
+  - DOMAIN-SUFFIX,parallels.com,PROXY
+  - DOMAIN-SUFFIX,nssurge.com,PROXY
+  - DOMAIN,plugins.jetbrains.com,PROXY
+  - DOMAIN,jike.teracloud.jp,日本
+  - DOMAIN-SUFFIX,infini-cloud.net,日本
+  - DOMAIN-SUFFIX,giffgaff.com,英国
+  - DOMAIN-SUFFIX,yahoo.com,国际基础服务
 
   # 8. 游戏平台
-  - RULE-SET,EA,游戏平台
-  - RULE-SET,Epic,游戏平台
-  - RULE-SET,Gog,游戏平台
-  - RULE-SET,Origin,游戏平台
-  - RULE-SET,PlayStation,游戏平台
-  - RULE-SET,Steam,游戏平台
-  - RULE-SET,Xbox,游戏平台
-  - RULE-SET,Blizzard,游戏平台
-  - RULE-SET,Nintendo,游戏平台
-  - RULE-SET,Game,游戏平台
+  - RULE-SET,EA,Game
+  - RULE-SET,Epic,Game
+  - RULE-SET,Gog,Game
+  - RULE-SET,Origin,Game
+  - RULE-SET,PlayStation,Game
+  - RULE-SET,Steam,Game
+  - RULE-SET,Xbox,Game
+  - RULE-SET,Blizzard,Game
+  - RULE-SET,Nintendo,Game
+  - RULE-SET,Game,Game
 
   # 9. 测速与通用海外域名
-  - RULE-SET,Speedtest,测速服务
-  - RULE-SET,Proxy,国际社区
-  - RULE-SET,Global,国际社区
-  - GEOSITE,geolocation-!cn,国际社区
+  - RULE-SET,Speedtest,SpeedTest
+  - RULE-SET,Proxy,PROXY
+  - RULE-SET,Global,PROXY
+  - GEOSITE,geolocation-!cn,PROXY
 
   # 10. IP 规则与 GeoIP 兜底
   - RULE-SET,Telegram,国际社区
-  - RULE-SET,GlobalMedia,国际社区
-  - GEOIP,CN,国内服务,no-resolve
-  - GEOIP,SG,新国自动策略,no-resolve
-  - GEOIP,TW,台湾自动策略,no-resolve
-  - GEOIP,HK,香港自动策略,no-resolve
-  - GEOIP,JP,日本自动策略,no-resolve
-  - GEOIP,US,美国自动策略,no-resolve
+  - RULE-SET,GlobalMedia,PROXY
+  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,SG,新加坡,no-resolve
+  - GEOIP,TW,台湾,no-resolve
+  - GEOIP,HK,香港,no-resolve
+  - GEOIP,JP,日本,no-resolve
+  - GEOIP,KR,韩国,no-resolve
+  - GEOIP,US,美国,no-resolve
 
   # 11. 最终兜底
-  - MATCH,漏网之鱼
+  - MATCH,FINAL
